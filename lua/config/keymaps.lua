@@ -1,7 +1,16 @@
 local mapKey = require("utils.keyMapper").mapKey
 
--- Neotree toggle
+-- Neotree
 mapKey('<leader>e', ':Neotree toggle<cr>')
+mapKey('<leader>n', ':Neotree focus<cr>')
+
+-- vim-fugitive
+mapKey('<leader>gs', ":Git<cr>")
+mapKey('<leader>ga', ":Git add .<cr>")
+mapKey('<leader>gd', ":Git diff<cr>")
+mapKey('<leader>gc', ":Git commit<cr>")
+mapKey('<leader>gp', ":Git push<cr>")
+mapKey('<leader>gl', ":Git pull<cr>")
 
 -- pane navigation
 mapKey('<C-h>', '<C-w>h') -- Left
