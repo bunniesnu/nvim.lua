@@ -1,4 +1,5 @@
 local mapKey = require("utils.keyMapper").mapKey
+local closeBuffer = require("utils.buffer").closeBuffer
 
 -- Neotree
 mapKey('<leader>e', ':Neotree toggle<cr>')
@@ -11,6 +12,11 @@ mapKey('<leader>gd', ":Git diff<cr>")
 mapKey('<leader>gc', ":Git commit<cr>")
 mapKey('<leader>gp', ":Git push<cr>")
 mapKey('<leader>gl', ":Git pull<cr>")
+
+-- Bufferline
+mapKey('<Tab>', ':BufferLineCycleNext<cr>')
+mapKey('<S-Tab>', ':BufferLineCyclePrev<cr>')
+mapKey('<leader>x', closeBuffer)
 
 -- pane navigation
 mapKey('<C-h>', '<C-w>h') -- Left
