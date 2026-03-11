@@ -22,7 +22,7 @@ return {
                         path = 1,
                         symbols = {
                             modified = " ●",
-                            readonly = " [R]",
+                            readonly = " ",
                             unnamed = "[No Name]"
                         }
                     }
