@@ -18,6 +18,10 @@ mapKey('<Tab>', ':BufferLineCycleNext<cr>')
 mapKey('<S-Tab>', ':BufferLineCyclePrev<cr>')
 mapKey('<leader>x', closeBuffer)
 
+-- indent
+mapKey('<', '<gv', 'v')
+mapKey('>', '>gv', 'v')
+
 -- pane navigation
 mapKey('<C-h>', '<C-w>h') -- Left
 mapKey('<C-j>', '<C-w>j') -- Down
