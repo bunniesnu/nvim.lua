@@ -1,3 +1,4 @@
+local keyMapper = require("utils.keyMapper").mapKey
 return {
     {
         "mason-org/mason.nvim",
@@ -28,6 +29,11 @@ return {
         end
     },
     {
-        "neovim/nvim-lspconfig"
+        "neovim/nvim-lspconfig",
+        config = function()
+            keyMapper('K', vim.lsp.buf.hover)
+            keyMapper('gd', vim.lsp.buf.definition)
+            keyMapper('<leader>ca', vim.lsp.buf.code_action)
+        end
     }
 }
