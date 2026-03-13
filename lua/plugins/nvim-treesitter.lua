@@ -1,11 +1,9 @@
 return {
     'nvim-treesitter/nvim-treesitter',
-    tag = "v0.10.0",
     lazy = false,
     build = ':TSUpdate',
     config = function()
-        local configs = require("nvim-treesitter.configs")
-        configs.setup({
+        require'nvim-treesitter'.setup {
             ensure_installed = {
                 "bash",
                 "c",
@@ -35,6 +33,6 @@ return {
             sync_install = false,
             highlight = { enable = true },
             indent = { enable = true }
-        })
+        }
     end
 }
